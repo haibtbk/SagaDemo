@@ -6,7 +6,7 @@ import { watchIncreaseCounter, watchDecreaseCounter } from '../counter/CounterSa
 // Redux Saga: Root Saga
 export function* rootSaga() {
     yield all([
-        fork(watchIncreaseCounter),
-        fork(watchDecreaseCounter),
+        watchIncreaseCounter,
+        watchDecreaseCounter,
     ]);
 };
